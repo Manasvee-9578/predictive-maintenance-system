@@ -1,0 +1,70 @@
+# ============================================================
+# Predictive Maintenance System — .gitignore
+# ============================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.whl
+
+# --- Virtual Environment ---
+venv/
+env/
+.venv/
+.env
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- TensorFlow / Keras ---
+*.h5
+*.hdf5
+*.pb
+saved_model/
+checkpoint
+
+# --- Model Artifacts ---
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.keras
+
+# --- Outputs ---
+outputs/logs/*.log
+outputs/reports/*.html
+outputs/reports/*.pdf
+outputs/figures/*.png
+outputs/figures/*.jpg
+
+# --- Data (large files) ---
+data/processed/*.csv
+data/processed/*.parquet
+data/processed/*.pkl
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Misc ---
+*.bak
+*.tmp
+*.temp
+.cache/

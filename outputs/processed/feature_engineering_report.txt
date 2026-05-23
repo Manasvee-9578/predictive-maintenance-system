@@ -1,0 +1,251 @@
+======================================================================
+  FEATURE ENGINEERING REPORT
+  Generated: 2026-05-20 08:14:35
+======================================================================
+
+  Train shape :   20,631 rows ×  225 columns
+  Test shape  :   13,096 rows ×  224 columns
+
+──────────────────────────────────────────────────────────────────────
+  FEATURE CATEGORIES
+──────────────────────────────────────────────────────────────────────
+  Base sensors                     :   14
+  Rolling statistics (mean + std)   :   28
+  Lag features                     :   42
+  Trend slopes                     :   14
+  Exponential moving averages      :   42
+  Operating condition normalised   :   14
+  Deviation from initial           :   14
+  Engine-wise grouped              :   42
+  Cycle / degradation              :    8
+
+──────────────────────────────────────────────────────────────────────
+  COMPLETE COLUMN LIST
+──────────────────────────────────────────────────────────────────────
+     1. engine_id
+     2. cycle
+     3. op_setting_1
+     4. op_setting_2
+     5. op_setting_3
+     6. sensor_2
+     7. sensor_3
+     8. sensor_4
+     9. sensor_7
+    10. sensor_8
+    11. sensor_9
+    12. sensor_11
+    13. sensor_12
+    14. sensor_13
+    15. sensor_14
+    16. sensor_15
+    17. sensor_17
+    18. sensor_20
+    19. sensor_21
+    20. rul
+    21. op_regime
+    22. sensor_2_op_norm
+    23. sensor_3_op_norm
+    24. sensor_4_op_norm
+    25. sensor_7_op_norm
+    26. sensor_8_op_norm
+    27. sensor_9_op_norm
+    28. sensor_11_op_norm
+    29. sensor_12_op_norm
+    30. sensor_13_op_norm
+    31. sensor_14_op_norm
+    32. sensor_15_op_norm
+    33. sensor_17_op_norm
+    34. sensor_20_op_norm
+    35. sensor_21_op_norm
+    36. sensor_2_roll_mean_5
+    37. sensor_2_roll_std_5
+    38. sensor_3_roll_mean_5
+    39. sensor_3_roll_std_5
+    40. sensor_4_roll_mean_5
+    41. sensor_4_roll_std_5
+    42. sensor_7_roll_mean_5
+    43. sensor_7_roll_std_5
+    44. sensor_8_roll_mean_5
+    45. sensor_8_roll_std_5
+    46. sensor_9_roll_mean_5
+    47. sensor_9_roll_std_5
+    48. sensor_11_roll_mean_5
+    49. sensor_11_roll_std_5
+    50. sensor_12_roll_mean_5
+    51. sensor_12_roll_std_5
+    52. sensor_13_roll_mean_5
+    53. sensor_13_roll_std_5
+    54. sensor_14_roll_mean_5
+    55. sensor_14_roll_std_5
+    56. sensor_15_roll_mean_5
+    57. sensor_15_roll_std_5
+    58. sensor_17_roll_mean_5
+    59. sensor_17_roll_std_5
+    60. sensor_20_roll_mean_5
+    61. sensor_20_roll_std_5
+    62. sensor_21_roll_mean_5
+    63. sensor_21_roll_std_5
+    64. sensor_2_lag_1
+    65. sensor_2_lag_2
+    66. sensor_2_lag_3
+    67. sensor_3_lag_1
+    68. sensor_3_lag_2
+    69. sensor_3_lag_3
+    70. sensor_4_lag_1
+    71. sensor_4_lag_2
+    72. sensor_4_lag_3
+    73. sensor_7_lag_1
+    74. sensor_7_lag_2
+    75. sensor_7_lag_3
+    76. sensor_8_lag_1
+    77. sensor_8_lag_2
+    78. sensor_8_lag_3
+    79. sensor_9_lag_1
+    80. sensor_9_lag_2
+    81. sensor_9_lag_3
+    82. sensor_11_lag_1
+    83. sensor_11_lag_2
+    84. sensor_11_lag_3
+    85. sensor_12_lag_1
+    86. sensor_12_lag_2
+    87. sensor_12_lag_3
+    88. sensor_13_lag_1
+    89. sensor_13_lag_2
+    90. sensor_13_lag_3
+    91. sensor_14_lag_1
+    92. sensor_14_lag_2
+    93. sensor_14_lag_3
+    94. sensor_15_lag_1
+    95. sensor_15_lag_2
+    96. sensor_15_lag_3
+    97. sensor_17_lag_1
+    98. sensor_17_lag_2
+    99. sensor_17_lag_3
+   100. sensor_20_lag_1
+   101. sensor_20_lag_2
+   102. sensor_20_lag_3
+   103. sensor_21_lag_1
+   104. sensor_21_lag_2
+   105. sensor_21_lag_3
+   106. health_index
+   107. degradation_rate
+   108. sensor_2_dev_from_init
+   109. sensor_3_dev_from_init
+   110. sensor_4_dev_from_init
+   111. sensor_7_dev_from_init
+   112. sensor_8_dev_from_init
+   113. sensor_9_dev_from_init
+   114. sensor_11_dev_from_init
+   115. sensor_12_dev_from_init
+   116. sensor_13_dev_from_init
+   117. sensor_14_dev_from_init
+   118. sensor_15_dev_from_init
+   119. sensor_17_dev_from_init
+   120. sensor_20_dev_from_init
+   121. sensor_21_dev_from_init
+   122. late_life_flag
+   123. sensor_2_trend_slope_10
+   124. sensor_3_trend_slope_10
+   125. sensor_4_trend_slope_10
+   126. sensor_7_trend_slope_10
+   127. sensor_8_trend_slope_10
+   128. sensor_9_trend_slope_10
+   129. sensor_11_trend_slope_10
+   130. sensor_12_trend_slope_10
+   131. sensor_13_trend_slope_10
+   132. sensor_14_trend_slope_10
+   133. sensor_15_trend_slope_10
+   134. sensor_17_trend_slope_10
+   135. sensor_20_trend_slope_10
+   136. sensor_21_trend_slope_10
+   137. sensor_2_ema_5
+   138. sensor_2_ema_10
+   139. sensor_2_ema_20
+   140. sensor_3_ema_5
+   141. sensor_3_ema_10
+   142. sensor_3_ema_20
+   143. sensor_4_ema_5
+   144. sensor_4_ema_10
+   145. sensor_4_ema_20
+   146. sensor_7_ema_5
+   147. sensor_7_ema_10
+   148. sensor_7_ema_20
+   149. sensor_8_ema_5
+   150. sensor_8_ema_10
+   151. sensor_8_ema_20
+   152. sensor_9_ema_5
+   153. sensor_9_ema_10
+   154. sensor_9_ema_20
+   155. sensor_11_ema_5
+   156. sensor_11_ema_10
+   157. sensor_11_ema_20
+   158. sensor_12_ema_5
+   159. sensor_12_ema_10
+   160. sensor_12_ema_20
+   161. sensor_13_ema_5
+   162. sensor_13_ema_10
+   163. sensor_13_ema_20
+   164. sensor_14_ema_5
+   165. sensor_14_ema_10
+   166. sensor_14_ema_20
+   167. sensor_15_ema_5
+   168. sensor_15_ema_10
+   169. sensor_15_ema_20
+   170. sensor_17_ema_5
+   171. sensor_17_ema_10
+   172. sensor_17_ema_20
+   173. sensor_20_ema_5
+   174. sensor_20_ema_10
+   175. sensor_20_ema_20
+   176. sensor_21_ema_5
+   177. sensor_21_ema_10
+   178. sensor_21_ema_20
+   179. sensor_2_engine_cumean
+   180. sensor_2_engine_custd
+   181. sensor_2_engine_rank
+   182. sensor_3_engine_cumean
+   183. sensor_3_engine_custd
+   184. sensor_3_engine_rank
+   185. sensor_4_engine_cumean
+   186. sensor_4_engine_custd
+   187. sensor_4_engine_rank
+   188. sensor_7_engine_cumean
+   189. sensor_7_engine_custd
+   190. sensor_7_engine_rank
+   191. sensor_8_engine_cumean
+   192. sensor_8_engine_custd
+   193. sensor_8_engine_rank
+   194. sensor_9_engine_cumean
+   195. sensor_9_engine_custd
+   196. sensor_9_engine_rank
+   197. sensor_11_engine_cumean
+   198. sensor_11_engine_custd
+   199. sensor_11_engine_rank
+   200. sensor_12_engine_cumean
+   201. sensor_12_engine_custd
+   202. sensor_12_engine_rank
+   203. sensor_13_engine_cumean
+   204. sensor_13_engine_custd
+   205. sensor_13_engine_rank
+   206. sensor_14_engine_cumean
+   207. sensor_14_engine_custd
+   208. sensor_14_engine_rank
+   209. sensor_15_engine_cumean
+   210. sensor_15_engine_custd
+   211. sensor_15_engine_rank
+   212. sensor_17_engine_cumean
+   213. sensor_17_engine_custd
+   214. sensor_17_engine_rank
+   215. sensor_20_engine_cumean
+   216. sensor_20_engine_custd
+   217. sensor_20_engine_rank
+   218. sensor_21_engine_cumean
+   219. sensor_21_engine_custd
+   220. sensor_21_engine_rank
+   221. cycle_norm
+   222. remaining_life_frac
+   223. cycle_squared
+   224. cycle_log
+   225. cycle_bin_encoded
+
+======================================================================

@@ -1,0 +1,2 @@
+model,samples,mae,rmse,r2,nasa_score
+RUL LSTM Inference,100,35.8661,42.1397,-0.0283,23332.2219
