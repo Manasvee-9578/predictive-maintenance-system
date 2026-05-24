@@ -11,9 +11,6 @@ scipy>=1.11.0
 # --- Machine Learning ---
 scikit-learn>=1.4.0
 
-# --- Deep Learning ---
-tensorflow-cpu==2.15.0
-
 # --- Visualization ---
 plotly>=5.18.0
 matplotlib>=3.8.0
