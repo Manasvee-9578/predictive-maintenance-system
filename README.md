@@ -201,12 +201,6 @@ This project uses the **NASA C-MAPSS Turbofan Engine Degradation Simulation** da
 
 ---
 
-## 📝 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
 ## 🤝 Contributing
 
 1. Fork the repository
